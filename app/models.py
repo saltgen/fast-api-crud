@@ -21,7 +21,9 @@ class Audio(Base):
 
 
 class Song(Audio):
-
+    """
+    Model ORM class for song audio type
+    """
     __tablename__ = "songs"
 
     class Config:
@@ -29,7 +31,9 @@ class Song(Audio):
 
 
 class Podcast(Audio):
-
+    """
+    Model ORM class for podcast audio type
+    """
     __tablename__ = "podcasts"
 
     host = Column(String(100), nullable=False)
@@ -37,7 +41,9 @@ class Podcast(Audio):
 
 
 class AudioBook(Audio):
-
+    """
+    Model ORM class for audiobook audio type
+    """
     __tablename__ = "audiobooks"
 
     author = Column(String(100), nullable=False)

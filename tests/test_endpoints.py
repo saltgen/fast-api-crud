@@ -161,6 +161,35 @@ def test_get_and_delete_audiobook():
     assert delete_response.status_code == 200
 
 
+def test_patch_audiobook():
+    data = {
+    "title": "1984",
+    "duration": "3544",
+    "uploaded_time": "2021-05-08T13:33:44.645000",
+    "author": "Geroge Orwell",
+    "narrator": "Mr X"
+    }
+    response = requests.post(
+    "http://127.0.0.1:8000/audiobooks",
+    data=json.dumps(data)
+    )
+    patch_data = {
+    "title": "1984",
+    "duration": "3544",
+    "uploaded_time": "2021-05-08T13:33:44.645000",
+    "author": "Geroge Orwell",
+    "narrator": "Mr Y"
+    }
+    patch_response = requests.patch(
+    f"http://127.0.0.1:8000/audiobooks/{response.json().get('id')}",
+    data=json.dumps(patch_data)
+    )
+    assert response.json()["id"] == patch_response.json()["id"]
+    assert patch_response.json()["narrator"] == "Mr Y"
+    # Following is the teardown process
+    requests.delete(f"http://127.0.0.1:8000/audiobooks/{patch_response.json().get('id')}")
+
+
 
 
 

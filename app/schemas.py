@@ -17,6 +17,9 @@ def convert_iso_to_datetime(datetime_string):
 
 
 class AudioBase(BaseModel):
+    """
+    Base pydantic schema class
+    """
     id: Optional[int]
 
     title: str
@@ -41,6 +44,10 @@ class AudioBase(BaseModel):
 
 
 class SongCreate(AudioBase):
+    """
+    Base pydantic schema class for SongCreate
+    """
+
     id: Optional[int] = None
 
     class Config:
@@ -48,6 +55,9 @@ class SongCreate(AudioBase):
 
 
 class PodcastCreate(AudioBase):
+    """
+    Base pydantic schema class for PodcastCreate
+    """
 
     host: str
     participants: Optional[List[str]] = None
@@ -63,6 +73,9 @@ class PodcastCreate(AudioBase):
 
 
 class AudioBookCreate(AudioBase):
+    """
+    Base pydantic schema class for AudioBookCreate
+    """
 
     id: Optional[int]
     author: str

@@ -8,5 +8,5 @@ __pycache__
 # exclude everything inside alembic/versions
 alembic/versions/*
 
-# exception to the rule
+# exception to the exclusion
 !alembic/versions/.gitkeep
