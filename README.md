@@ -5,6 +5,10 @@
 - Alembic is used to handle the database migrations
 - pytest is being for testing purposes
 
+### Clone Git repo and change directory
+
+- Open Terminal and execute `git clone git@github.com:saltgen/fast-api-crud.git`
+- Execute, `cd fast-api-crud/`
 ### Initialize the Postgres database
 
 - `make run-db`
@@ -32,7 +36,7 @@
 
 ### Run the tests:
 
-- Open a new shell, reactivate the virtual environment and execute `pytest tests/`
+- Open a new shell, reactivate the virtual environment, `source venv/bin/activate` and execute `pytest tests/`
 
 ### Sending requests (Postman):
 

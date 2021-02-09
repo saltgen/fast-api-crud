@@ -5,4 +5,8 @@
 .coverage
 venv
 __pycache__
-alembic/versions
+# exclude everything inside alembic/versions
+alembic/versions/*
+
+# exception to the rule
+!alembic/versions/.gitkeep
