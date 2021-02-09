@@ -3,3 +3,6 @@
 .git
 .pytest_cache
 .coverage
+venv
+__pycache__
+alembic/versions
