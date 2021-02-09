@@ -43,7 +43,8 @@
 
 ### Sending requests (Postman):
 
- - POST: Open Postman, select POST method, paste the following url - `http://127.0.0.1:8000/songs`
+ - POST: Open Postman, select POST method, paste the following url - `http://127.0.0.1:8000/songs`, add data
+   as json click Send
 
  - Sample data for song, audiobook, podcast audio types can be found [here](tests/test_endpoints.py), under post methods
 
