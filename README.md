@@ -70,7 +70,7 @@
   using mock objects and a separate database just for testing purposes, although a proper teardown has been ensured
 
 - There are two endpoints for GET, for some reason the optional path parameter is not working,
-  Github issue, [here](ttps://github.com/tiangolo/fastapi/issues/945)
+  Github issue, [here](https://github.com/tiangolo/fastapi/issues/945)
 
 - Faced another issue the schemas are not getting mapped to the model classes, this project has been built
   entirely by following the FastAPI documentation, but for some reason, mapping pydantic schema to ORM model
