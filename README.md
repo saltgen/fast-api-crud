@@ -33,7 +33,7 @@
 ### Run the server:
 
 - `uvicorn app.main:app --reload`
-- Please ensure the api service is running locally on `http://127.0.0.1:8000/audiobooks`,
+- Please ensure the api service is running locally on `http://127.0.0.1:8000`,
   this is necessary for the tests to function
 
 
